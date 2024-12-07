@@ -34,7 +34,9 @@ def text_to_speech(text):
     if not text.strip():
         return "No text provided. Please enter text to synthesize."
     narrated_text = narrator(text)
-    return (narrated_text["audio"][0], narrated_text["sampling_rate"])
+    audio_array = narrated_text["audio"][0].flatten()  # Flatten the 2D array to 1D
+    sampling_rate = narrated_text["sampling_rate"]  # Get sampling rate
+    return sampling_rate, audio_array
 
 # Sample Dataset Access Function
 def get_dataset_sample(idx):
