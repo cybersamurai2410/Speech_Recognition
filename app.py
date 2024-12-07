@@ -29,6 +29,6 @@ app = gr.TabbedInterface(
             allow_flagging="never",
         )
     ],
-    ["Transcribe Microphone", "Transcribe Audio File", "Long-Form Transcription", "Dataset Samples", "Text-to-Speech"]
+    ["Transcribe Speech", "Long-Form Transcription", "Text-to-Speech"]
 )
 app.launch()
